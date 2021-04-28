@@ -3,7 +3,7 @@ body {
 }
 
 .submit-area {
-    margin: 50px;
+    margin-top: 50px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px grey;
     padding: 40px;
@@ -13,14 +13,8 @@ body {
     display: none;
 }
 
-.status {
-    margin: 0 20px;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
 .deposit {
+    margin: 20px;
     background-color: slateblue;
 }
 
@@ -28,6 +22,6 @@ body {
     background-color: lightsalmon;
 }
 
-.balance {
+.bank-balance {
     background-color: orange;
 }

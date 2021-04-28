@@ -80,14 +80,13 @@
             const currentDepositNumber = parseFloat(currentDeposit);
             const totalDeposit = depositNumber + currentDepositNumber;
             document.getElementById("currentDeposit").innerText = totalDeposit;
-
+            document.getElementById("depositAmount").value = "";
 
             const currentBalance = document.getElementById("currentBalance").innerText;
             const currentBalanceNumber = parseFloat(currentBalance);
             const totalBalance = depositNumber + currentBalanceNumber;
-            console.log(totalBalance);
             document.getElementById("currentBalance").innerText = totalBalance;
-
+            document.getElementById("depositAmount").value = "";
         })
     </script>
 

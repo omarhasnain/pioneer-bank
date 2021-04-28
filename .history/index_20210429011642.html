@@ -82,11 +82,11 @@
             document.getElementById("currentDeposit").innerText = totalDeposit;
 
 
-            const currentBalance = document.getElementById("currentBalance").innerText;
+            const currentBalance = document.getElementById("currentBalance").value;
             const currentBalanceNumber = parseFloat(currentBalance);
             const totalBalance = depositNumber + currentBalanceNumber;
             console.log(totalBalance);
-            document.getElementById("currentBalance").innerText = totalBalance;
+            document.getElementById("currentBalance").value = totalBalance;
 
         })
     </script>
