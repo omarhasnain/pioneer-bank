@@ -72,25 +72,20 @@
                 transactionArea.style.display = "block";
             })
             // deposit button event handler
-        const depositButton = document.getElementById("addDeposit");
-        depositButton.addEventListener("click", function() {
+        const depositButton = document.getElementById("addDeposit").addEventListener('click', function() {
             const depositNumber = getInputNumber("depositAmount");
 
-            updateSpanText("currentDeposit", depositNumber);
-            updateSpanText("currentBalance", depositNumber);
+            // updateSpanText("currentDeposit", depositNumber);
+            //updateSpanText("currentBalance", depositNumber); -->
 
             document.getElementById("depositAmount").value = "";
+            const withdrawNumber = parseFloat(withdrawAmount);
         })
 
         // withdraw button event handler
-        const withdrawButton = document.getElementById("addWithdraw");
-        withdrawButton.addEventListener("click", function() {
+        const withdrawButton = document.getElementById("addWithdraw").addEventListener('click', function() {
             const withdrawNumber = getInputNumber("withdrawAmount");
-
-            updateSpanText("currentWithdraw", withdrawNumber);
-            updateSpanText("currentBalance", -1 * withdrawNumber);
-
-            document.getElementById("withdrawAmount").value = ""
+            console.log(withdrawNumber);
         })
 
         function getInputNumber(id) {
@@ -99,11 +94,12 @@
             return amountNumber;
         }
 
-        function updateSpanText(id, addedNumber) {
+        function updateSpanText(id, depositNumber) {
             const current = document.getElementById(id).innerText;
-            const currentNumber = parseFloat(current);
-            const totalAmount = addedNumber + currentNumber;
+            const currentAmount = parseFloat(current);
+            const totalAmount = depositNumber + currentNumber;
             document.getElementById(id).innerText = totalAmount;
+
         }
     </script>
 

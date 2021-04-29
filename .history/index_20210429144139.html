@@ -72,8 +72,8 @@
                 transactionArea.style.display = "block";
             })
             // deposit button event handler
-        const depositButton = document.getElementById("addDeposit");
-        depositButton.addEventListener("click", function() {
+        const depositBtn = document.getElementById("addDeposit");
+        depositBtn.addEventListener("click", function() {
             const depositNumber = getInputNumber("depositAmount");
 
             updateSpanText("currentDeposit", depositNumber);

@@ -72,14 +72,14 @@
                 transactionArea.style.display = "block";
             })
             // deposit button event handler
-        const depositButton = document.getElementById("addDeposit");
-        depositButton.addEventListener("click", function() {
+        const depositButton = document.getElementById("addDeposit").addEventListener('click', function() {
             const depositNumber = getInputNumber("depositAmount");
 
-            updateSpanText("currentDeposit", depositNumber);
-            updateSpanText("currentBalance", depositNumber);
+            // updateSpanText("currentDeposit", depositNumber);
+            //updateSpanText("currentBalance", depositNumber); -->
 
             document.getElementById("depositAmount").value = "";
+            const withdrawNumber = parseFloat(withdrawAmount);
         })
 
         // withdraw button event handler
